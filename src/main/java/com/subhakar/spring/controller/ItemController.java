@@ -20,7 +20,6 @@ public class ItemController {
         return new ResponseEntity<>(itemService.saveGroceryItem(groceryItem), HttpStatus.CREATED);
     }
 
-
     @GetMapping(value = "/items", params = "name")
     public ResponseEntity<GroceryItem> getGroceryItemByName(@RequestParam String name) {
         return ResponseEntity.ok(itemService.getGroceryItemByName(name));
